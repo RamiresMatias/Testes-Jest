@@ -5,6 +5,12 @@
 > É uma introdução a Jest, logo os conhecimentos anotados aqui serão introdutórios
 
 
+
+
+
+
+
+
 ### Comandos de configuração inicial do Jest
 
 - npx jest --init
@@ -31,4 +37,26 @@ it('descrição do teste',  () => {
 
 test('...')
 
+```
+
+### Objeto Jest
+
+- O objeto jest possui diversos métodos que possam ser executados para auxiliar nos testes
+
+- Método spyOn(object, 'nameMethod')
+> o spyOn cria uma função semelhante a qual irá testar e realiza o rastreio, validando se irá ser executada.
+
+```ts
+it('plays video', () => {
+  const video = {
+    play() {
+      return true;
+    },
+  };
+
+  test('plays video', () => {
+    const spy = jest.spyOn(video, 'play');
+    expect(spy).toHaveBeenCalled();
+  })
+})
 ```
