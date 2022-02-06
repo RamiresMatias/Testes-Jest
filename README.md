@@ -60,3 +60,12 @@ it('plays video', () => {
   })
 })
 ```
+### Mockar retorno de métodos com jest
+
+- Com o método mockReturnValueOnce é possível realizar o mock do retorno de uma função, inserido o valor a ser mockado
+
+```ts
+const shoppingCartMockSpy = jest
+  .spyOn(shoppingCartMock, 'isEmpty')
+  .mockReturnValueOnce(true)
+```
