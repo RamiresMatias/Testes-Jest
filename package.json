@@ -5,7 +5,8 @@
   "main": "./src/main.ts",
   "scripts": {
     "test": "jest",
-    "test:silent": "npx jest --watchAll --silent --noStackTrace"
+    "test:silent": "npx jest --watchAll --silent --noStackTrace",
+    "test:coverage": "jest --coverage --silent --noStackTrace"
   },
   "keywords": [],
   "author": "Ramires Matias",
